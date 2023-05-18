@@ -1,8 +1,8 @@
-
+import banner from '../../../assets/banner/banner.png'
 const Banner = () => {
     return (
         <div className="relative">
-            <img className="h-[730px] w-full" src="https://i.ibb.co/8Pq6Ybq/Banners-Community-3.png" alt="" />
+            <img className="h-[730px] w-full object-cover" src={banner} alt="" />
             <div className="absolute top-1/2 left-20 transform  -translate-y-1/2">
                 <h1 style={{ textShadow: '5px 2px 4px rgba(255, 255, 255, 0.5)' }} className="text-9xl font-bold text-pink-600">Welcome</h1>
                 <h1 style={{ textShadow: '5px 2px 4px rgba(255, 255, 255, 0.5)' }} className="text-3xl mb-4 font-bold tracking-widest text-[#6d6a6a]">best car toys of <span className="text-[#06959d] italic">baby wheels</span></h1>

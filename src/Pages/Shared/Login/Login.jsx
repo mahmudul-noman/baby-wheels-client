@@ -35,7 +35,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 setSuccess('Login Successful with Google')
-                // setUser(user)
+                setUser(user)
             })
             .catch(error => {
                 setError(error.message);

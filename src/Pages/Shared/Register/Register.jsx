@@ -50,10 +50,10 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                setError('');
-                setSuccess('')
+                // setSuccess('')
                 event.target.reset();
                 setSuccess('User Created Successfully');
+                // setError();
                 updateUser(result.user, name, photo);
                 console.log(user);
             })
