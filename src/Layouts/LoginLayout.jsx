@@ -1,16 +1,16 @@
-import { Outlet } from "react-router-dom";
-import NavBar from "../Pages/Shared/Navbar/NavBar";
-import Footer from "../Pages/Shared/Footer/Footer";
+// import { Outlet } from "react-router-dom";
+// import NavBar from "../Pages/Shared/Navbar/NavBar";
+// import Footer from "../Pages/Shared/Footer/Footer";
 
 
-const LoginLayout = () => {
-    return (
-        <div>
-            <NavBar></NavBar>
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-    );
-};
+// const LoginLayout = () => {
+//     return (
+//         <div>
+//             <NavBar></NavBar>
+//             <Outlet></Outlet>
+//             <Footer></Footer>
+//         </div>
+//     );
+// };
 
-export default LoginLayout;
+// export default LoginLayout;
