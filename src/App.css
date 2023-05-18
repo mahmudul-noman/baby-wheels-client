@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
     font-family: 'Fredoka', sans-serif;
@@ -7,4 +8,8 @@ body {
 
 .stl-font {
     font-family: 'Pacifico', cursive;
+}
+
+.stl2-font {
+    font-family: 'Lobster', cursive;
 }

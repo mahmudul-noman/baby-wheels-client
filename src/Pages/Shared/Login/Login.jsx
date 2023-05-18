@@ -50,7 +50,7 @@ const Login = () => {
                     <img src="https://i.ibb.co/BKRjyfF/17465926-2007-i039-019-cyber-security-spyware-data-protection-isometric-set-06.jpg" alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
-                    <h1 className='text-center text-4xl text-cyan-600 font-bold'>Login</h1>
+                    <h1 className='text-center text-4xl text-pink-600 font-bold'>Login</h1>
                     <div className="card-body">
                         <form onSubmit={handleSignIn}>
                             <div className="form-control">
@@ -75,7 +75,7 @@ const Login = () => {
                             </div>
                         </form>
                         <div>
-                            <button onClick={handleGoogleSignIn} className='btn border-0 btn-block flex items-center bg-gradient-to-r from-green-700 to-yellow-600'>Login With Google <span className='ml-4 text-2xl'><FaGoogle></FaGoogle></span></button>
+                            <button onClick={handleGoogleSignIn} className='btn border-0 btn-block flex items-center bg-gradient-to-r from-green-700 to-yellow-600 tracking-widest'>Login With Google <span className='ml-4 text-2xl'><FaGoogle></FaGoogle></span></button>
                         </div>
                         <p className='font-semibold mt-5'>Don't have an account? <Link to='/register' className='text-rose-600'>Register</Link></p>
                     </div>
