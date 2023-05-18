@@ -1,8 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import '../../../../src/App';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
 
     return (
         <div>
@@ -20,10 +25,10 @@ const NavBar = () => {
                             <Link className='text-base font-semibold text-[#666]' to="/blog">Blog</Link>
                         </ul>
                     </div>
-                    <div className='flex items-center'>
+                    <Link to='/' className='flex items-center'>
                         <img className='w-20' src='https://i.ibb.co/gtt9pKd/transportation-concept-with-car-removebg-preview.png' alt="" />
-                        <p className="lg:text-xl text-sm font-bold bg-gradient-to-r from-pink-400 to-yellow-500 text-transparent bg-clip-text">Baby Wheels</p>
-                    </div>
+                        <p className="lg:text-2xl text-sm font-bold bg-gradient-to-r from-pink-400 to-yellow-500 text-transparent bg-clip-text">Baby Wheels</p>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-5">
@@ -39,12 +44,19 @@ const NavBar = () => {
 
                 <div className="navbar-end space-x-3">
                     <div className='flex items-center'>
-                        <div className='mr-3'>
-                            <img src='https://scontent.fdac149-1.fna.fbcdn.net/v/t39.30808-6/347026308_960946755046139_4510150892294380424_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHMrtOuFNal_hOI_msdV1IF_25dw80obsn_bl3DzShuyabVqQlizSSqhBnDBZLCwvzyDsSWH1LiEBoRJMqCYU2w&_nc_ohc=zf6k2IlRcssAX_AJac_&_nc_ht=scontent.fdac149-1.fna&oh=00_AfCLo8HYuTu2XiE-pZveK0J86495W_5YQe2ZEUda_4QEjw&oe=64697A88' className='w-14 h-14 border-2 border-sky-400 p-2 rounded-full object-cover' alt="" />
-                        </div>
-                        <Link className="btn btn-outline border-0 text-white bg-pink-600 tracking-widest">Logout</Link>
+                        {
+                            user ?
+                                <div className='flex items-center'>
+                                    <div className='mr-3'>
+
+                                        <img title={user?.displayName} src={user?.photoURL} className='w-14 h-14 border-2 border-sky-400 p-2 rounded-full object-cover' alt="" />
+                                    </div>
+                                    <Link onClick={logOut} className="btn btn-outline border-0 hover:bg-[#11d6e1] text-white bg-pink-600 tracking-widest">Logout</Link>
+                                </div>
+                                :
+                                <Link to="/login" className="btn btn-outline border-0 text-white bg-[#11d6e1] hover:bg-pink-600 tracking-widest">Log in</Link>
+                        }
                     </div>
-                    <Link to="/login" className="btn btn-outline border-0 text-white bg-[#11d6e1] tracking-widest">Log in</Link>
                 </div>
             </div>
         </div>
