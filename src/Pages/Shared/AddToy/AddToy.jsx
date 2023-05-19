@@ -1,10 +1,25 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const AddToy = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+        fetch('http://localhost:5000/addToys', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then((result) => {
+                console.log(result);
+            })
+        console.log(data)
+    };
+
+    const { user } = useContext(AuthContext);
 
 
 
@@ -30,7 +45,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Name</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue="Police Car" {...register("toyName")} />
+                                <input required className="input input-bordered" type="text" defaultValue="" {...register("toyName")} />
                             </div>
 
                             {/* Seller Name */}
@@ -38,7 +53,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Seller Name</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue="" {...register("sellerName")} />
+                                <input required className="input input-bordered" type="text" defaultValue={user?.displayName} {...register("sellerName")} />
                             </div>
 
                             {/* Seller Email */}
@@ -46,7 +61,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Seller Email</span>
                                 </label>
-                                <input required className="input input-bordered" type="email" defaultValue="" {...register("sellerEmail")} />
+                                <input required className="input input-bordered" type="email" defaultValue={user?.email} {...register("sellerEmail")} />
                             </div>
 
                             {/* Toy Category */}
@@ -108,7 +123,7 @@ const AddToy = () => {
 
 
                         <div className="form-control mt-6">
-                            <input className="btn btn-block border-0 bg-gradient-to-r from-pink-400 to-yellow-500 text-white mt-5 tracking-widest" type="submit" value="Add a Toy" />
+                            <input className="text-lg btn btn-block border-0 bg-gradient-to-r from-pink-400 to-yellow-500 text-white mt-5 tracking-widest" type="submit" value="Add a Toy" />
                         </div>
                     </form>
                 </div>

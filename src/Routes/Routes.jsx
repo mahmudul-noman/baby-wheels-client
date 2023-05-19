@@ -7,6 +7,9 @@ import Register from "../Pages/Shared/Register/Register";
 import Error from "../Pages/Shared/Error/Error";
 import Blog from "../Pages/Blog/Blog";
 import AddToy from "../Pages/Shared/AddToy/AddToy";
+import AllToys from "../Pages/Shared/AllToys/AllToys";
+import PrivateRoute from "./PrivateRoute";
+import MyToys from "../Pages/Shared/MyToys/MyToys";
 
 // const router = createBrowserRouter([
 //     {
@@ -60,7 +63,15 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addToys',
-                element: <AddToy></AddToy>
+                element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
+            },
+            {
+                path: 'allToys',
+                element: <AllToys></AllToys>
+            },
+            {
+                path: 'myToys',
+                element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
             }
         ]
     }
