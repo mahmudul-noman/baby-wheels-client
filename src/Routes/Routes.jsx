@@ -6,6 +6,7 @@ import Login from "../Pages/Shared/Login/Login";
 import Register from "../Pages/Shared/Register/Register";
 import Error from "../Pages/Shared/Error/Error";
 import Blog from "../Pages/Blog/Blog";
+import AddToy from "../Pages/Shared/AddToy/AddToy";
 
 // const router = createBrowserRouter([
 //     {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
             {
                 path: 'blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: 'addToys',
+                element: <AddToy></AddToy>
             }
         ]
     }

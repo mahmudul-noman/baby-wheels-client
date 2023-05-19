@@ -10,6 +10,7 @@ const Footer = () => {
                     <div className="lg:flex gap-5 justify-around">
                         <div>
                             <img className="w-32" src="https://i.ibb.co/gtt9pKd/transportation-concept-with-car-removebg-preview.png" alt="" />
+                            <p className="lg:text-2xl text-sm font-bold bg-gradient-to-r from-pink-400 to-yellow-500 text-transparent bg-clip-text">Baby Wheels</p>
                             <p className="text-base font-semibold">Come visit The Little Dino Center for yourself <br /> so you can tour the rooms and meet some of our educators.</p>
                         </div>
 

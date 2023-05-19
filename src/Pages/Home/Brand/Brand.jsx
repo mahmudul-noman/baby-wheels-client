@@ -9,11 +9,11 @@ import brand6 from '../../../assets/brand/6.png'
 const Brand = () => {
     return (
 
-        // For Brand Logo Looks Awesome, I'm Using This image from Themeforest.
+        // For Brand Logo Looks Awesome, I'm Using brand image from Themeforest.
 
         <div className='bg-[#ffeef3] py-20'>
             <div className='container mx-auto'>
-                <h2 className='text-3xl font-bold'>Valuable Brand <span className='text-pink-600 font-bold stl-font'>#TOP</span></h2>
+                <h2 className='text-3xl font-bold'>Our Valuable Brand <span className='text-pink-600 font-bold stl-font'>#TOP</span></h2>
                 <div className="flex justify-between">
                     <div className="carousel-item">
                         <img className='w-full' src={brand1} alt="Burger" />

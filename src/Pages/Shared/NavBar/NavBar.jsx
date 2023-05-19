@@ -21,8 +21,8 @@ const NavBar = () => {
                             <Link className='text-base font-semibold text-[#666]' to="/">Home</Link>
                             <Link className='text-base font-semibold text-[#666]' to="/allToys">All Toys</Link>
                             <Link className='text-base font-semibold text-[#666]' to="/myToys">My Toys</Link>
-                            <Link className='text-base font-semibold text-[#666]' to="/addToys">Add Toys</Link>
-                            <Link className='text-base font-semibold text-[#666]' to="/blog">Blog</Link>
+                            <Link className='text-base font-semibold text-[#666]' to="/addToys">Add A Toy</Link>
+                            <Link className='text-base font-semibold text-[#666]' to="/blog">Blogs</Link>
                         </ul>
                     </div>
                     <Link to='/' className='flex items-center'>
@@ -31,12 +31,19 @@ const NavBar = () => {
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 space-x-5">
+                    <ul className="menu menu-horizontal px-1 space-x-7">
                         <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/">Home</Link>
                         <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/allToys">All Toys</Link>
-                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/myToys">My Toys</Link>
-                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/addToys">Add Toys</Link>
-                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/blog">Blog</Link>
+                        {
+                            user ?
+                                <div className='space-x-7'>
+                                    <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/myToys">My Toys</Link>
+                                    <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/addToys">Add A Toy</Link>
+                                </div>
+                                : ''
+
+                        }
+                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/blog">Blogs</Link>
                     </ul>
                 </div>
 
