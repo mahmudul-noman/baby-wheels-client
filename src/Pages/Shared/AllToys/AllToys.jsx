@@ -4,8 +4,6 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const AllToys = () => {
 
-    const { user } = useContext(AuthContext);
-
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
