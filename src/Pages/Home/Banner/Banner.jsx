@@ -1,4 +1,4 @@
-import banner from '../../../assets/banner/banner.png'
+import banner from '../../../assets/banner/banner-1.png'
 const Banner = () => {
     return (
         <div className="relative">

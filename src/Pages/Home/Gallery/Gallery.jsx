@@ -2,7 +2,7 @@ import { FaCar } from "react-icons/fa";
 
 const Gallery = () => {
     return (
-        <div className="bg-[#ffeef362]">
+        <div className="bg-[#ffeef3]">
             <div className="py-12 container mx-auto">
                 <div className="flex gap-2 items-center justify-center mb-12">
                     <p className="text-4xl font-bold text-[#11d6e1]">Gallery</p>
