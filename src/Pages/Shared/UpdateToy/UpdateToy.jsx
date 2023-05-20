@@ -13,7 +13,7 @@ const UpdateToy = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const handleUpdate = (data) => {
-        fetch(`http://localhost:5000/allToys/${_id}`, {
+        fetch(`https://baby-wheels-server.vercel.app/allToys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

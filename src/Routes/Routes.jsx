@@ -50,12 +50,12 @@ const router = createBrowserRouter([
             {
                 path: 'singleToy/:id',
                 element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://baby-wheels-server.vercel.app/allToys/${params.id}`)
             },
             {
                 path: '/myToys/updateToy/:id',
                 element: <UpdateToy></UpdateToy>,
-                loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+                loader: ({params}) => fetch(`https://baby-wheels-server.vercel.app/allToys/${params.id}`)
             }
 
         ]
