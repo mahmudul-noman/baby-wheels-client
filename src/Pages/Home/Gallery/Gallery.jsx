@@ -5,9 +5,9 @@ const Gallery = () => {
         <div className="bg-[#ffeef3]">
             <div className="py-12 container mx-auto">
                 <div className="flex gap-2 items-center justify-center mb-12">
-                    <p className="text-4xl font-bold text-[#11d6e1]">Gallery</p>
-                    <p className="text-7xl font-bold"><FaCar className="text-pink-600"></FaCar></p>
-                    <p className="text-4xl font-bold bg-gradient-to-r from-pink-400 to-yellow-500 text-transparent bg-clip-text">KidsZone</p>
+                    <p className="text-3xl font-bold text-[#11d6e1]">Gallery</p>
+                    <p className="text-5xl font-bold"><FaCar className="text-pink-600"></FaCar></p>
+                    <p className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-yellow-500 text-transparent bg-clip-text">KidsZone</p>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                     <div className="relative shadow p-1 bg-sky-100">

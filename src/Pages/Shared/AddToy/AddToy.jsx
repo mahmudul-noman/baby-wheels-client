@@ -1,19 +1,28 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddToy = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        fetch('https://baby-wheels-server.vercel.app/addToys', {
+        fetch('http://localhost:5000/addToys', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
         })
             .then(res => res.json())
             .then((result) => {
+                if (result.insertedId) {
+                    Swal.fire({
+                        title: 'Toy Added Successfully',
+                        text: 'Do you want to continue',
+                        icon: 'success',
+                        confirmButtonText: 'OKAY !'
+                    })
+                }
                 console.log(result);
             })
         console.log(data)

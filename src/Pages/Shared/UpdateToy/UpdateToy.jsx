@@ -7,13 +7,14 @@ import Swal from "sweetalert2";
 const UpdateToy = () => {
 
     const toyData = useLoaderData()
+    console.log(toyData);
     const { _id, toyPhoto, toyName, sellerName, sellerEmail, toyPrice, toyRating, quantity, toyDetails } = toyData;
     const { user } = useContext(AuthContext);
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const handleUpdate = (data) => {
-        fetch(`https://baby-wheels-server.vercel.app/allToys/${_id}`, {
+        fetch(`http://localhost:5000/allToys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -28,7 +29,7 @@ const UpdateToy = () => {
                         title: 'Toy Update Successfully',
                         text: 'Do you want to continue',
                         icon: 'success',
-                        confirmButtonText: 'Jossss'
+                        confirmButtonText: 'Okay !'
                     })
                 }
             })

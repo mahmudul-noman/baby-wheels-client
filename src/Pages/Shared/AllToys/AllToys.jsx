@@ -12,7 +12,7 @@ const AllToys = () => {
     );
 
     useEffect(() => {
-        fetch('https://baby-wheels-server.vercel.app/allToys')
+        fetch('http://localhost:5000/allToys')
             .then(res => res.json())
             .then((result) => {
                 setToys(result);

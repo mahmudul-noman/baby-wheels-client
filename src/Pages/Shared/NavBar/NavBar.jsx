@@ -30,6 +30,7 @@ const NavBar = () => {
                         <p className="lg:text-2xl text-sm font-bold bg-gradient-to-r from-pink-400 to-yellow-500 text-transparent bg-clip-text">Baby Wheels</p>
                     </Link>
                 </div>
+                
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-7">
                         <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/">Home</Link>
