@@ -24,7 +24,6 @@ const AllToys = () => {
             <div className="container mx-auto">
                 <h2 className="text-center font-bold text-pink-500 text-4xl stl2-font mb-4 tracking-wider">Our Popular Toys Collection</h2>
                 <div className="overflow-x-auto">
-
                     <div className="flex justify-center mb-4">
                         <div className="form-control shadow">
                             <div className="input-group">
@@ -36,7 +35,7 @@ const AllToys = () => {
                         </div>
                     </div>
 
-
+                    <h1 className="font-semibold text-yellow-600">Total Toys: {toys.length}</h1>
                     <table className="table w-full">
                         <thead>
                             <tr>

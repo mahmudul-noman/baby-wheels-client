@@ -58,9 +58,10 @@ const MyToys = () => {
     return (
         <div className="py-12">
             <div className="container mx-auto">
-                <h2 className="text-center text-4xl font-bold text-pink-500 stl2-font tracking-widest mb-6">My Added Toys: {toys.length}</h2>
+                <h2 className="text-center text-4xl font-bold text-pink-500 stl2-font tracking-widest mb-6">My Added Toys</h2>
 
                 <div className="overflow-x-auto w-full">
+                    <h1 className="font-semibold text-pink-700">Total Added Toys: {toys.length}</h1>
                     <table className="table w-full">
                         {/* head */}
                         <thead>
@@ -93,7 +94,7 @@ const MyToys = () => {
                                             <p>Name: {toy.sellerEmail}</p>
                                         </th>
                                         <th>
-                                            <Link><FaEdit className="mb-2 text-3xl text-black"></FaEdit></Link>
+                                            <Link to={`updateToy/${toy._id}`}><FaEdit className="mb-2 text-3xl text-black"></FaEdit></Link>
                                             <button onClick={() => handleDelete(toy._id)}><FaTrashAlt className=" text-3xl text-red-500"></FaTrashAlt></button>
                                         </th>
                                     </tr>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
@@ -29,7 +29,7 @@ const SingleToy = () => {
                             <h4 className="text-lg font-bold">Seller Email: <span className="font-semibold">{sellerEmail}</span></h4>
                         </div>
                         <div>
-                        <button className="border-dotted border-0 btn bg-gradient-to-r from-pink-400 to-yellow-500 text-white mt-5 tracking-widest">Shop Now</button>
+                            <button className="border-dotted border-0 btn bg-gradient-to-r from-pink-400 to-yellow-500 text-white mt-5 tracking-widest">Shop Now</button>
                         </div>
                     </div>
                 </div>

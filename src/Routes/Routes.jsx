@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home/Home";
-// import LoginLayout from "../Layouts/LoginLayout";
 import Login from "../Pages/Shared/Login/Login";
 import Register from "../Pages/Shared/Register/Register";
 import Error from "../Pages/Shared/Error/Error";
@@ -13,33 +12,6 @@ import MyToys from "../Pages/Shared/MyToys/MyToys";
 import UpdateToy from "../Pages/Shared/UpdateToy/UpdateToy";
 import SingleToy from "../Pages/Shared/SingleToy/SingleToy";
 
-// const router = createBrowserRouter([
-//     {
-//         path: "/",
-//         element: <Main></Main>,
-//         errorElement: <Error></Error>,
-//         children: [
-//             {
-//                 path: '/',
-//                 element: <Home></Home>
-//             }
-//         ]
-//     },
-//     {
-//         path: '/',
-//         element: <LoginLayout></LoginLayout>,
-//         children: [
-//             {
-//                 path: '/login',
-//                 element: <Login></Login>
-//             },
-//             {
-//                 path: '/register',
-//                 element: <Register></Register>
-//             }
-//         ]
-//     }
-// ]);
 
 const router = createBrowserRouter([
     {
@@ -79,6 +51,11 @@ const router = createBrowserRouter([
                 path: 'singleToy/:id',
                 element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+            },
+            {
+                path: '/myToys/updateToy/:id',
+                element: <UpdateToy></UpdateToy>,
+                loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
             }
 
         ]
