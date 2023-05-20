@@ -28,26 +28,26 @@ const ShopByCategory = () => {
     return (
         <div className="bg-gray-100 py-12">
             <div className="container mx-auto">
-                <h1 className="text-center font-extrabold text-3xl text-pink-600 mb-6">Explore All Vehicles By Category</h1>
+                <h1 className="text-center font-extrabold text-3xl text-pink-600 mb-6 tracking-wider">Explore All Car Toys By Category</h1>
 
-                <div className="tabs mb-4 justify-center">
+                <div className="tabs mb-8 justify-center">
                     <a
                         onClick={() => handleTabClick("microbus")}
-                        className={`text-lg font-semibold tab tab-bordered ${activeTab == "microbus" ? "tab-active text-pink-600" : ""
+                        className={`text-lg font-semibold tab tab-bordered ${activeTab == "microbus" ? "border-b-4 border-pink-600 text-pink-600" : ""
                             }`}>
                         Cars
                     </a>
 
                     <a
                         onClick={() => handleTabClick("firecar")}
-                        className={`text-lg font-semibold tab tab-bordered ${activeTab == "firecar" ? "tab-active text-pink-600" : ""
+                        className={`text-lg font-semibold tab tab-bordered ${activeTab == "firecar" ? "border-b-4 border-pink-600 text-pink-600" : ""
                             }`}>
                         Fire Fighter Truck
                     </a>
 
                     <a
                         onClick={() => handleTabClick("bike")}
-                        className={`text-lg font-semibold tab tab-bordered ${activeTab == "bike" ? "tab-active text-pink-600" : ""
+                        className={`text-lg font-semibold tab tab-bordered ${activeTab == "bike" ? "border-b-4 border-pink-600 text-pink-600" : ""
                             }`}>
                         Motor Bike
                     </a>
