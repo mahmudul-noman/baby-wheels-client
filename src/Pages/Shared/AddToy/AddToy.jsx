@@ -37,7 +37,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Photo URL</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue="" {...register("toyPhoto")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue="" {...register("toyPhoto")} />
                             </div>
 
                             {/* Toy Name */}
@@ -45,7 +45,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Name</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue="" {...register("toyName")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue="" {...register("toyName")} />
                             </div>
 
                             {/* Seller Name */}
@@ -53,7 +53,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Seller Name</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue={user?.displayName} {...register("sellerName")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue={user?.displayName} {...register("sellerName")} />
                             </div>
 
                             {/* Seller Email */}
@@ -61,7 +61,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Seller Email</span>
                                 </label>
-                                <input required className="input input-bordered" type="email" defaultValue={user?.email} {...register("sellerEmail")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="email" defaultValue={user?.email} {...register("sellerEmail")} />
                             </div>
 
                             {/* Toy Category */}
@@ -81,7 +81,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Price</span>
                                 </label>
-                                <input required className="input input-bordered" type="number" defaultValue="500" {...register("toyPrice")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="number" defaultValue="500" {...register("toyPrice")} />
                             </div>
 
                             {/* Toy Rating */}
@@ -89,7 +89,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Rating</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue="4.9" {...register("toyRating",
+                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue="4.9" {...register("toyRating",
                                     // For Rating Limitations: 0 to 5, I'm using Chat GPT.
                                     {
                                         pattern: {
@@ -108,7 +108,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Available Quantity</span>
                                 </label>
-                                <input required className="input input-bordered" type="text" defaultValue="15" {...register("quantity")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue="15" {...register("quantity")} />
                             </div>
 
                         </div>
@@ -118,7 +118,7 @@ const AddToy = () => {
                             <label className="label">
                                 <span className="label-text font-semibold text-lg">Toy Details</span>
                             </label>
-                            <textarea required className="input input-bordered" type="text" defaultValue="" {...register("toyDetails")} />
+                            <textarea required className="input border-0 focus:outline-none shadow" type="text" defaultValue="" {...register("toyDetails")} />
                         </div>
 
 

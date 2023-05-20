@@ -49,13 +49,13 @@ const MyToys = () => {
                                             <p>Rating: {toy.toyRating}</p>
                                         </th>
                                         <th>$ {toy.toyPrice}</th>
-                                        <th className="font-normal">Available: {toy.quantity}</th>
+                                        <th className="font-normal">Available: {toy.quantity} PCS</th>
                                         <th className="font-normal">
                                             <p>Name: {toy.sellerName}</p>
                                             <p>Name: {toy.sellerEmail}</p>
                                         </th>
                                         <th>
-                                            <Link><FaEdit className="mb-2 text-3xl text-green-500"></FaEdit></Link>
+                                            <Link><FaEdit className="mb-2 text-3xl text-black"></FaEdit></Link>
                                             <Link><FaTrashAlt className=" text-3xl text-red-500"></FaTrashAlt></Link>
                                         </th>
                                     </tr>
