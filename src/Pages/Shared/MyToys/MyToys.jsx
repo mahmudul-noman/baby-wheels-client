@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 const MyToys = () => {
@@ -10,16 +11,54 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
 
+    const handleDelete = _id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then(result => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/allToys/${_id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Toy has been deleted.',
+                                'success'
+                            );
+                            const remaining = toys.filter(toy => toy._id !== _id);
+                            setToys(remaining);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error deleting toy:', error);
+                    });
+            }
+        });
+    };
+
+
+
     useEffect(() => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user])
 
+
+
     return (
         <div className="py-12">
             <div className="container mx-auto">
-                <h2 className="text-center text-4xl font-bold text-pink-500 stl2-font tracking-widest mb-6">My Added Toys</h2>
+                <h2 className="text-center text-4xl font-bold text-pink-500 stl2-font tracking-widest mb-6">My Added Toys: {toys.length}</h2>
 
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
@@ -34,7 +73,6 @@ const MyToys = () => {
                                 <th className="text-base">Action</th>
                             </tr>
                         </thead>
-
 
                         <tbody>
                             {
@@ -56,15 +94,12 @@ const MyToys = () => {
                                         </th>
                                         <th>
                                             <Link><FaEdit className="mb-2 text-3xl text-black"></FaEdit></Link>
-                                            <Link><FaTrashAlt className=" text-3xl text-red-500"></FaTrashAlt></Link>
+                                            <button onClick={() => handleDelete(toy._id)}><FaTrashAlt className=" text-3xl text-red-500"></FaTrashAlt></button>
                                         </th>
                                     </tr>
                                 )
                             }
                         </tbody>
-
-
-
                     </table>
                 </div>
             </div>
