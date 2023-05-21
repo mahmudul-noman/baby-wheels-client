@@ -93,7 +93,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Price</span>
                                 </label>
-                                <input required className="input border-0 focus:outline-none shadow" type="number" defaultValue="500" {...register("toyPrice")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="number" {...register("toyPrice")} />
                             </div>
 
                             {/* Toy Rating */}
@@ -101,7 +101,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Toy Rating</span>
                                 </label>
-                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue="4.9" {...register("toyRating",
+                                <input required className="input border-0 focus:outline-none shadow" type="text" {...register("toyRating",
                                     // For Rating Limitations: 0 to 5, I'm using Chat GPT.
                                     {
                                         pattern: {
@@ -120,7 +120,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-lg">Available Quantity</span>
                                 </label>
-                                <input required className="input border-0 focus:outline-none shadow" type="text" defaultValue="15" {...register("quantity")} />
+                                <input required className="input border-0 focus:outline-none shadow" type="text" {...register("quantity")} />
                             </div>
 
                         </div>

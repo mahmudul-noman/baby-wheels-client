@@ -11,27 +11,27 @@ const Brand = () => {
 
         // For Brand Logo Looks Awesome, I'm Using brand image from Themeforest.
 
-        <div data-aos="zoom-in" data-aos-duration="2500" className='bg-[#ffeef3] py-20'>
+        <div data-aos="zoom-in" data-aos-duration="1500" className='bg-[#ffeef3] py-20'>
             <div className='container mx-auto'>
-                <h2 className='text-3xl font-bold'>Our Valuable Brand <span className='text-pink-600 font-bold stl-font'>#TOP</span></h2>
-                <div className="flex justify-between">
+                <h2 className='text-2xl lg:text-3xl font-bold lg:text-start text-center'>Our Valuable Brand <span className='text-pink-600 font-bold stl-font'>#TOP</span></h2>
+                <div className="lg:flex lg:justify-between grid grid-cols-2">
                     <div className="carousel-item">
-                        <img className='w-full' src={brand1} alt="Burger" />
+                        <img className='lg:w-full mx-auto' src={brand1} alt="Burger" />
                     </div>
                     <div className="carousel-item">
-                        <img className='w-full' src={brand2} alt="Burger" />
+                        <img className='lg:w-full mx-auto' src={brand2} alt="Burger" />
                     </div>
                     <div className="carousel-item">
-                        <img className='w-full' src={brand3} alt="Burger" />
+                        <img className='lg:w-full mx-auto' src={brand3} alt="Burger" />
                     </div>
                     <div className="carousel-item">
-                        <img className='w-full' src={brand4} alt="Burger" />
+                        <img className='lg:w-full mx-auto' src={brand4} alt="Burger" />
                     </div>
                     <div className="carousel-item">
-                        <img className='w-full' src={brand5} alt="Burger" />
+                        <img className='lg:w-full mx-auto' src={brand5} alt="Burger" />
                     </div>
                     <div className="carousel-item">
-                        <img className='w-full' src={brand6} alt="Burger" />
+                        <img className='lg:w-full mx-auto' src={brand6} alt="Burger" />
                     </div>
                 </div>
             </div>
