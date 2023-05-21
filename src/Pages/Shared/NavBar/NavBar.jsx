@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../../../../src/App';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
+import ActiveLink from './ActiveLink';
+
 
 const NavBar = () => {
 
@@ -18,11 +20,11 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <Link className='text-base font-semibold text-[#666]' to="/">Home</Link>
-                            <Link className='text-base font-semibold text-[#666]' to="/allToys">All Toys</Link>
-                            <Link className='text-base font-semibold text-[#666]' to="/myToys">My Toys</Link>
-                            <Link className='text-base font-semibold text-[#666]' to="/addToys">Add A Toy</Link>
-                            <Link className='text-base font-semibold text-[#666]' to="/blog">Blogs</Link>
+                            <ActiveLink className='text-base font-semibold text-[#666]' to="/">Home</ActiveLink>
+                            <ActiveLink className='text-base font-semibold text-[#666]' to="/allToys">All Toys</ActiveLink>
+                            <ActiveLink className='text-base font-semibold text-[#666]' to="/myToys">My Toys</ActiveLink>
+                            <ActiveLink className='text-base font-semibold text-[#666]' to="/addToys">Add A Toy</ActiveLink>
+                            <ActiveLink className='text-base font-semibold text-[#666]' to="/blog">Blogs</ActiveLink>
                         </ul>
                     </div>
                     <Link to='/' className='flex items-center'>
@@ -33,18 +35,18 @@ const NavBar = () => {
                 
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-7">
-                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/">Home</Link>
-                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/allToys">All Toys</Link>
+                        <ActiveLink className='text-2xl tracking-widest uppercase font-bold text-[#666]' to="/">Home</ActiveLink>
+                        <ActiveLink className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/allToys">All Toys</ActiveLink>
                         {
                             user ?
-                                <div className='space-x-7'>
-                                    <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/myToys">My Toys</Link>
-                                    <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/addToys">Add A Toy</Link>
+                                <div className='space-x-7 flex'>
+                                    <ActiveLink className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/myToys">My Toys</ActiveLink>
+                                    <ActiveLink className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/addToys">Add A Toy</ActiveLink>
                                 </div>
                                 : ''
 
                         }
-                        <Link className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/blog">Blogs</Link>
+                        <ActiveLink className='text-base tracking-widest uppercase font-semibold text-[#666]' to="/blog">Blogs</ActiveLink>
                     </ul>
                 </div>
 
