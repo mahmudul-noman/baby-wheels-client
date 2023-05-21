@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
@@ -6,6 +7,11 @@ const SingleToy = () => {
 
     const toy = useLoaderData();
     const { _id, toyPhoto, toyName, sellerName, sellerEmail, toyPrice, toyRating, quantity, toyDetails } = toy;
+
+    useEffect(() => {
+        document.title = "PHero | Toy Details";
+    }, []);
+
 
     return (
         <div className="bg-gray-100 py-12">

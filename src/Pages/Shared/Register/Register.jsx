@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
@@ -59,6 +59,11 @@ const Register = () => {
             })
             .then(error => setError(error.message))
     }
+
+    useEffect(() => {
+        document.title = "PHero | Register";
+    }, []);
+
 
 
     return (

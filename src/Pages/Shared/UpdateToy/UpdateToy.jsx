@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -8,7 +8,7 @@ const UpdateToy = () => {
 
     const toyData = useLoaderData()
     console.log(toyData);
-    const { _id, toyPhoto, toyName, sellerName, sellerEmail, toyPrice, toyRating, quantity, toyDetails } = toyData;
+    const { _id, toyPhoto, toyName, toyCategory, sellerName, sellerEmail, toyPrice, toyRating, quantity, toyDetails } = toyData;
     const { user } = useContext(AuthContext);
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -34,6 +34,11 @@ const UpdateToy = () => {
                 }
             })
     }
+
+    useEffect(() => {
+        document.title = "PHero | Update Toy";
+    }, []);
+
 
 
     return (
@@ -90,7 +95,8 @@ const UpdateToy = () => {
                             <label className="label">
                                 <span className="label-text font-semibold text-lg">Toy Category</span>
                             </label>
-                            <select className="input" {...register("toyCategory")}>
+                            <select defaultValue={toyCategory} className="input" {...register("toyCategory")}>
+                                {/* <option ></option> */}
                                 <option value="microbus">Micro Bus</option>
                                 <option value="firecar">Fire & Rescue</option>
                                 <option value="bike">Motor Bike</option>

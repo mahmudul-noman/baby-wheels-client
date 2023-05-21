@@ -45,14 +45,15 @@ const MyToys = () => {
         });
     };
 
-
-
     useEffect(() => {
         fetch(`https://baby-wheels-server.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user])
 
+    useEffect(() => {
+        document.title = "PHero | My Toys";
+    }, []);
 
 
     return (

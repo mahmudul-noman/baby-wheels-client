@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 
 const AddToy = () => {
-
+    const { user } = useContext(AuthContext);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         fetch('https://baby-wheels-server.vercel.app/addToys', {
@@ -28,7 +28,10 @@ const AddToy = () => {
         console.log(data)
     };
 
-    const { user } = useContext(AuthContext);
+    useEffect(() => {
+        document.title = "PHero | Add A Toy";
+    }, []);
+
 
 
 

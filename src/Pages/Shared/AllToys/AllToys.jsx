@@ -19,6 +19,11 @@ const AllToys = () => {
             })
     }, [])
 
+
+    useEffect(() => {
+        document.title = "PHero | All Toys";
+    }, []);
+
     return (
         <div className="bg-[#ffeef3d2] py-20">
             <div className="container mx-auto">

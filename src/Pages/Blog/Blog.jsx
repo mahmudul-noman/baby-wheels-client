@@ -1,5 +1,11 @@
+import { useEffect } from "react";
 
 const Blog = () => {
+
+    useEffect(() => {
+        document.title = "PHero | Blogs";
+    }, []);
+
     return (
         <div className="container mx-auto py-20">
             <h2 className="font-bold text-2xl text-center bg-gradient-to-r from-pink-600 to-yellow-400 text-transparent bg-clip-text mb-8 tracking-wider">Know ABout - Express JS, MongoDB, Nest JS, SQL-NoSQL</h2>
