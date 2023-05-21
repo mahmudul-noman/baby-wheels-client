@@ -11,7 +11,7 @@ const Brand = () => {
 
         // For Brand Logo Looks Awesome, I'm Using brand image from Themeforest.
 
-        <div className='bg-[#ffeef3] py-20'>
+        <div data-aos="zoom-in" data-aos-duration="2500" className='bg-[#ffeef3] py-20'>
             <div className='container mx-auto'>
                 <h2 className='text-3xl font-bold'>Our Valuable Brand <span className='text-pink-600 font-bold stl-font'>#TOP</span></h2>
                 <div className="flex justify-between">

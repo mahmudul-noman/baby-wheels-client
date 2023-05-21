@@ -26,7 +26,8 @@ const ShopByCategory = () => {
     };
 
     return (
-        <div className="bg-gray-100 py-20">
+        <div data-aos="fade-down"
+        data-aos-duration="2000" className="bg-gray-100 py-20">
             <div className="container mx-auto">
                 <h1 className="text-center font-extrabold text-3xl text-pink-600 mb-6 tracking-wider">Explore All Car Toys By Category</h1>
 
