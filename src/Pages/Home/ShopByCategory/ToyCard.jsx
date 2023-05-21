@@ -14,7 +14,7 @@ const ToyCard = ({ toy }) => {
                     <h4 className="text-[#11d6e1] text-xl font-bold">On Sale $ <span className="text-[#11d9b1]">{toyPrice}</span> USD</h4>
                     <h4 className="text-yellow-500 font-bold text-xl flex gap-1 items-center">Ratings: {toyRating} <FaStar></FaStar></h4>
                     <div>
-                        <Link to={`/singleToy/${toy._id}`}>
+                        <Link to={`/singleToy/${_id}`}>
                             <button className="border-dotted border-0 btn bg-gradient-to-r from-pink-400 to-yellow-500 text-white mt-5 tracking-widest">View Details</button>
                         </Link>
                     </div>

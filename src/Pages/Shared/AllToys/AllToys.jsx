@@ -12,7 +12,7 @@ const AllToys = () => {
     );
 
     useEffect(() => {
-        fetch('http://localhost:5000/allToys')
+        fetch('https://baby-wheels-server.vercel.app/allToys')
             .then(res => res.json())
             .then((result) => {
                 setToys(result);
@@ -20,9 +20,9 @@ const AllToys = () => {
     }, [])
 
     return (
-        <div className="bg-[#ffeef3d2] py-12">
+        <div className="bg-[#ffeef3d2] py-20">
             <div className="container mx-auto">
-                <h2 className="text-center font-bold text-pink-500 text-4xl stl2-font mb-4 tracking-wider">Our Popular Toys Collection</h2>
+                <h2 className="text-center font-bold text-pink-500 text-4xl stl2-font mb-4 tracking-widest">Our Toys Collection</h2>
                 <div className="overflow-x-auto">
                     <div className="flex justify-center mb-4">
                         <div className="form-control shadow">

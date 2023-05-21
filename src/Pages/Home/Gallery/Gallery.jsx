@@ -3,7 +3,7 @@ import { FaCar } from "react-icons/fa";
 const Gallery = () => {
     return (
         <div className="bg-[#ffeef3]">
-            <div className="py-12 container mx-auto">
+            <div className="py-20 container mx-auto">
                 <div className="flex gap-2 items-center justify-center mb-12">
                     <p className="text-3xl font-bold text-[#11d6e1]">Gallery</p>
                     <p className="text-5xl font-bold"><FaCar className="text-pink-600"></FaCar></p>

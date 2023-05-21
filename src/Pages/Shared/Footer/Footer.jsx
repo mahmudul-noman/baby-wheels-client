@@ -1,4 +1,3 @@
-// import './Footer.css';
 
 import { FaEnvelope, FaFacebookSquare, FaInstagram, FaMapMarked, FaMapMarkedAlt, FaMapMarkerAlt, FaPhoneAlt, FaTwitterSquare } from "react-icons/fa";
 

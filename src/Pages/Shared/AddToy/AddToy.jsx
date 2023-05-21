@@ -8,7 +8,7 @@ const AddToy = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/addToys', {
+        fetch('https://baby-wheels-server.vercel.app/addToys', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -35,7 +35,7 @@ const AddToy = () => {
     return (
         <div className="bg-[#ffeef3]">
             <div className="container mx-auto">
-                <div className="py-12 text-center">
+                <div className="py-20 text-center">
                     <h2 className="text-4xl font-bold stl2-font text-pink-500 mb-6">Add Your Toy</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {errors.exampleRequired && <span>This field is required</span>}

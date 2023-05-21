@@ -57,12 +57,12 @@ const NavBar = () => {
                                 <div className='flex items-center'>
                                     <div className='mr-3'>
 
-                                        <img title={user?.displayName} src={user?.photoURL} className='w-14 h-14 border-2 border-sky-400 p-2 rounded-full object-cover' alt="" />
+                                        <img title={user?.displayName} src={user?.photoURL} className='w-14 h-14 border-2 border-pink-600 p-1 rounded-full object-cover' alt="" />
                                     </div>
-                                    <Link onClick={logOut} className="btn btn-outline border-0 hover:bg-[#11d6e1] text-white bg-pink-600 tracking-widest">Logout</Link>
+                                    <Link onClick={logOut} className="btn btn-outline border-0 bg-gradient-to-r from-pink-400 to-yellow-500 text-white tracking-widest">Logout</Link>
                                 </div>
                                 :
-                                <Link to="/login" className="btn btn-outline border-0 text-white bg-[#11d6e1] hover:bg-pink-600 tracking-widest">Log in</Link>
+                                <Link to="/login" className="btn btn-outline border-0 text-white bg-gradient-to-r from-pink-400 to-yellow-500 tracking-widest">Log in</Link>
                         }
                     </div>
                 </div>

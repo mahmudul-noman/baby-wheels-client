@@ -22,7 +22,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then(result => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/allToys/${_id}`, {
+                fetch(`https://baby-wheels-server.vercel.app/allToys/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -48,7 +48,7 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://baby-wheels-server.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user])
@@ -56,7 +56,7 @@ const MyToys = () => {
 
 
     return (
-        <div className="py-12">
+        <div className="py-20">
             <div className="container mx-auto">
                 <h2 className="text-center text-4xl font-bold text-pink-500 stl2-font tracking-widest mb-6">My Added Toys</h2>
 

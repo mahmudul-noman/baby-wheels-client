@@ -1,8 +1,8 @@
 
 const Blog = () => {
     return (
-        <div className="container mx-auto py-12">
-            <h2 className="font-bold text-xl text-center stl2-font text-cyan-500 mb-5 tracking-widest">Know ABout - Express JS, MongoDB, Nest JS, SQL-NoSQL</h2>
+        <div className="container mx-auto py-20">
+            <h2 className="font-bold text-2xl text-center bg-gradient-to-r from-pink-600 to-yellow-400 text-transparent bg-clip-text mb-8 tracking-wider">Know ABout - Express JS, MongoDB, Nest JS, SQL-NoSQL</h2>
             <div className="grid grid-cols-1 lg:px-0 px-2 lg:grid-cols-2 gap-4">
                 <div className="ques1 bg-white rounded-lg overflow-hidden shadow-md p-5">
                     <h1 className="text-rose-500 font-bold mb-3 text-lg">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>
